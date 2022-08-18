@@ -1,15 +1,21 @@
-def barathAdd(x,y):
-    return x + y
+class cal():
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
 
-def barathSub(x,y):
-    return x - y
+    def barathAdd(self):
+        return self.x + self.y
 
-def multiply(x, y):
-    return x * y
+    def barathSub(self):
+        return self.x - self.y
 
-# This function divides two numbers
-def divide(x, y):
-    return x / y
+    def multiply(self):
+        return self.x * self.y
+
+    # This function divides two numbers
+    def divide(self):
+        return self.x / self.y
+
 
 while True:
 
@@ -20,21 +26,23 @@ while True:
         x = float(input("Enter first number: "))
         y = float(input("Enter second number: "))
 
+        obj=cal(x,y)
+
         if choice == '1':
             print("condition 2")
-            print(barathAdd(x,y))
+            print(obj.barathAdd())
 
         elif choice == '2':
             print("condition 3")
-            print(barathSub(x,y))
+            print(obj.barathSub())
 
         elif choice == '3':
             print("condition 3")
-            print(multiply(x,y))
+            print(obj.multiply())
 
         elif choice == '4':
             print("condition 3")
-            print(divide(x,y))
+            print(obj.divide())
 
         next_calculation = input("Another Calculation (yes/no)")
         if next_calculation == 'no':
